@@ -1,23 +1,23 @@
 let filtrationBottons = [
+    {
+        "buttonName": "По алфавиту ↑",
+        "type": "button",
+        "data-sort": "alf-up"
+    },
+    {
+        "buttonName": "По алфавиту ↓",
+        "type": "button",
+        "data-sort": "alf-down"
+    },
     { 
         "buttonName": "В наличии",
         "type": "button",
-        "data-sort": "inStock"
+        "data-sort": "in-stock"
     },
     { 
         "buttonName": "Не в наличии",
         "type": "button",
-        "data-sort": "notAvailable"
-    },
-    { 
-        "buttonName": "Пиццы",
-        "type": "button",
-        "data-sort": "pizzas"
-    },
-    { 
-        "buttonName": "Пиццы в наличии",
-        "type": "button",
-        "data-sort": "pizzasInStock"
+        "data-sort": "not-available"
     },
     { 
         "buttonName": "По возрастанию",
@@ -31,6 +31,23 @@ let filtrationBottons = [
     }
 ];
 
+function sortProducts(sortType) {
+
+    let sortedProducts;
+
+    if (sortType === 'alf-up') {
+        sortedProducts = [...products].sort((a, b) => a.productName.localeCompare(b.productName));
+    } else if (sortType === 'alf-down') {
+        sortedProducts = [...products].sort((a, b) => b.productName.localeCompare(a.productName));
+    } else if (sortType === "not-available") {
+
+    } else if (sortType === "ascending") {
+
+    } else if (sortType === "descending") {
+        
+    }
+}
+
 function addBtn(btnList) {
     filtrationBottons.forEach(botton => {
         let btnItem = document.createElement('li');
@@ -42,6 +59,9 @@ function addBtn(btnList) {
         btnfilter.type = botton.type;
         btnfilter.setAttribute('data-sort', botton["data-sort"]);
         btnfilter.textContent = botton.buttonName;
+        btnfilter.addEventListener('click', function(){
+            sortProducts(btnfilter.getAttribute('data-sort'));
+        })
         btnItem.appendChild(btnfilter);
     });
 }

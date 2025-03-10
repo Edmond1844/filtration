@@ -1,52 +1,52 @@
 {
     "products": [
         { 
-            "img": "./img/product/pizza/pepperoni-pizza.png",
-            "width": "209",
-            "height": "260",
-            "productName": "Пицца пепперони",
-            "price": 1,
-            "buttonImg": "./img/icon/plus.svg"
+            "img": "./img/mac.jpg",
+            "width": "360",
+            "height": "230",
+            "productName": "Apple MacBook Air 13",
+            "price": 104999,
+            "inStock": true
         },
         { 
-            "img": "./img/product/pizza/pizza-sausages.png",
-            "width": "209",
-            "height": "260",
-            "productName": "Пицца с колбасками",
-            "price": 6,
-            "buttonImg": "./img/icon/plus.svg"
+            "img": "./img/asus.png",
+            "width": "360",
+            "height": "230",
+            "productName": "Asus VivoBook 15 A512F",
+            "price": 39500,
+            "inStock": true
         },
         { 
-            "img": "./img/product/pizza/pizza-mushrooms.png",
-            "width": "209",
-            "height": "260",
-            "productName": "Пицца с грибами",
-            "price": 2,
-            "buttonImg": "./img/icon/plus.svg"
+            "img": "./img/lenovo.jpeg",
+            "width": "360",
+            "height": "230",
+            "productName": "Lenovo IP Gaming 3 15IMH05",
+            "price": 121670,
+            "inStock": false
         },
         { 
-            "img": "./img/product/pizza/pepperoni-pizza.png",
-            "width": "209",
-            "height": "260",
-            "productName": "Пицца пепперони",
-            "price": 5,
-            "buttonImg": "./img/icon/plus.svg"
+            "img": "./img/lenovo.jpeg",
+            "width": "360",
+            "height": "230",
+            "productName": "Lenovo IP Gaming 3 15IMH05",
+            "price": 121670,
+            "inStock": true
         },
         { 
-            "img": "./img/product/pizza/pizza-sausages.png",
-            "width": "209",
-            "height": "260",
-            "productName": "Пицца с колбасками",
-            "price": 3,
-            "buttonImg": "./img/icon/plus.svg"
+            "img": "./img/asus.png",
+            "width": "360",
+            "height": "230",
+            "productName": "Ноутбук Asus VivoBook 15 A512F",
+            "price": 39500,
+            "inStock": false
         },
         { 
-            "img": "./img/product/pizza/pizza-mushrooms.png",
-            "width": "209",
-            "height": "260",
-            "productName": "Пицца с грибами",
-            "price": 4,
-            "buttonImg": "./img/icon/plus.svg"
+            "img": "./img/mac.jpg",
+            "width": "360",
+            "height": "230",
+            "productName": "Ноутбук Apple MacBook Air 13",
+            "price": 104999,
+            "inStock": true
         }
     ]
 }

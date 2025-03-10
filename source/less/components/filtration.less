@@ -3,7 +3,7 @@
 }
 
 .filtration__wrapper-btn {
-    padding: 50px 15px;
+    padding: 50px 5px;
     
     .reset-styles-ol ();
 }
@@ -27,4 +27,36 @@
     &:hover {
         background-color: orange;
     }
+}
+
+.filtration__card-wrapper {
+    .reset-styles-ol ();
+    padding: 20px 5px;
+}
+
+.filtration__card-product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.filtration__card-product-Item {
+    display: grid;
+    grid-row-gap: 10px;
+    width: 400px;
+} 
+
+.filtration__card-product-name {
+    .title ();
+
+    font-size: 20px;
+}
+
+.filtration__card-product-price {
+    .font ();
+    
+    margin: 0;
+
+    color: orange;
 }

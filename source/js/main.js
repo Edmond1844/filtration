@@ -11,9 +11,16 @@ let btnList = document.createElement("ul");
 btnList.setAttribute('class', 'filtration__btn-list');
 btnWrapper.appendChild(btnList);
 
-container.append(btnWrapper);
+let wrapperCard = document.createElement('div');
+wrapperCard.setAttribute('class', 'filtration__card-wrapper');
+
+let cardProductList = document.createElement('ul');
+cardProductList.setAttribute('class', 'filtration__card-product-list');
+
+wrapperCard.appendChild(cardProductList);
+container.append(btnWrapper, wrapperCard);
 
 document.body.appendChild(container);
 
 addBtn(btnList);
-getProducts('http://localhost:3001/products', container);
+getProducts('http://localhost:3001/products', cardProductList);
