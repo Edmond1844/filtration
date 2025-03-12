@@ -44,7 +44,7 @@ const products = [
             "width": "360",
             "height": "230",
             "productName": "Apple MacBook Air 13",
-            "price": 10499,
+            "price": 9999,
             "inStock": true
         }
     ]
