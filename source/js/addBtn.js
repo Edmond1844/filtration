@@ -1,3 +1,5 @@
+import sortProducts from "./sort.js";
+
 let filtrationBottons = [
     {
         "buttonName": "По алфавиту ↑",
@@ -31,24 +33,7 @@ let filtrationBottons = [
     }
 ];
 
-function sortProducts(sortType) {
-
-    let sortedProducts;
-
-    if (sortType === 'alf-up') {
-        sortedProducts = [...products].sort((a, b) => a.productName.localeCompare(b.productName));
-    } else if (sortType === 'alf-down') {
-        sortedProducts = [...products].sort((a, b) => b.productName.localeCompare(a.productName));
-    } else if (sortType === "not-available") {
-
-    } else if (sortType === "ascending") {
-
-    } else if (sortType === "descending") {
-        
-    }
-}
-
-function addBtn(btnList) {
+function addBtn(btnList, cardProductList) {
     filtrationBottons.forEach(botton => {
         let btnItem = document.createElement('li');
         btnItem.setAttribute('class', 'filtration__btn-item');
@@ -60,7 +45,7 @@ function addBtn(btnList) {
         btnfilter.setAttribute('data-sort', botton["data-sort"]);
         btnfilter.textContent = botton.buttonName;
         btnfilter.addEventListener('click', function(){
-            sortProducts(btnfilter.getAttribute('data-sort'));
+            sortProducts(btnfilter.getAttribute('data-sort'), cardProductList);
         })
         btnItem.appendChild(btnfilter);
     });

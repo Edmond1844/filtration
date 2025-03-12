@@ -1,5 +1,6 @@
 import addBtn from "./addBtn.js";
 import getProducts from "./getProducts.js";
+import products from "./data.js";
 
 let container = document.createElement('div');
 container.setAttribute('class', 'filtration__container');
@@ -22,5 +23,5 @@ container.append(btnWrapper, wrapperCard);
 
 document.body.appendChild(container);
 
-addBtn(btnList);
-getProducts('http://localhost:3001/products', cardProductList);
+getProducts(products, cardProductList);
+addBtn(btnList, cardProductList);
