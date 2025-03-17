@@ -1,4 +1,5 @@
-const products = [
+{
+    "laptops": [
         { 
             "img": "./img/mac.jpg",
             "width": "360",
@@ -48,6 +49,5 @@ const products = [
             "inStock": true
         }
     ]
-
-export default products;
+}
 

@@ -8,10 +8,6 @@ function sortProducts(sortType, cardProductList) {
         sortedProducts = [...products].sort((a, b) => a.productName.localeCompare(b.productName));
     } else if (sortType === 'alf-down') {
         sortedProducts = [...products].sort((a, b) => b.productName.localeCompare(a.productName));
-    } else if (sortType === "not-available") {
-        sortedProducts = products.filter(item => !item.inStock);
-    } else if (sortType === "in-stock") {
-        sortedProducts = products.filter(item => item.inStock);
     } else if (sortType === "ascending") {
         sortedProducts = [...products].sort((a, b) => a.price - b.price);
     } else if (sortType === "descending") {
