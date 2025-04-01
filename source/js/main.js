@@ -1,13 +1,17 @@
-// import products from "./data.js";
-// import addBtn from "./addBtn.js";
-// import renderProducts from "./render.js";
-// import getProducts from "./getProducts.js";
+import loadProducts from "./load.js";
+import button from "./addBtn.js"
 
-// renderProducts();
-// // getProducts(products, cardProductList);
-// // addBtn(btnList, cardProductList);
+let container = document.createElement('div');
+container.className = 'filtration__container';
 
+let btnList = document.createElement('ul');
+btnList.className = 'filtration__btn-list';
 
-import renderProducts from "./render.js";
+let cardProductList = document.createElement('ul');
+cardProductList.className = 'filtration__card-product-list';
 
-renderProducts();
+container.append(btnList, cardProductList);
+document.body.appendChild(container);
+
+button();
+loadProducts();
