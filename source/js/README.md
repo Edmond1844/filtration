@@ -17,5 +17,7 @@
 
 | **searchProducts.js**      | *(закомментировано)* `check(products, input, form)` | Получает 3 параметра: products, searchInput, searchForm. Где products это массив товаров который нахотся в файле data.js. searchInput DOM элемент поле ввода. searchForm                   |
 
+|**store.js**|               | `setThemeColor, getThemeColor` |         | В store.js есть пустой массив для получения цвета фона и 2 функции|
+
 | **toggleBackgroundColor** | | `toggleBtn()` |  | Переключает цвет фона с белого на серый |
 
