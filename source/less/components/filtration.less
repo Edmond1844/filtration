@@ -1,5 +1,65 @@
 .filtration__container {
     .container ();
+
+    position: relative;
+}
+
+.filtration__dark {
+    background-color: rgb(110, 110, 110);
+}
+
+.filtration__white {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 20px;
+    right: -50px;
+
+    width: 50px;
+    height: 25px;
+    
+    border-radius: 20px;
+    box-shadow: -1px 0px 8px 9px rgba(163, 163, 163, 0.5);
+
+    display: flex;
+    align-items: center;
+}
+
+.filtration__dark-theme {
+    transform: translateX(25px);
+}
+
+.filtration__btn-toggle-wrapper {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+
+    width: 50px;
+    height: 25px;
+    
+    border-radius: 20px;
+    box-shadow: -1px 0px 8px 9px rgba(163, 163, 163, 0.5);
+
+    display: flex;
+    align-items: center;
+
+    background-color: rgb(75, 75, 75);
+    
+}
+
+
+.filtration__btn-toggle {
+    .btn ();
+
+    width: 20px;
+    height: 20px;
+
+    margin: 2px;
+
+    border-radius: 50%;
+    border: none;
+    
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s;
 }
 
 .filtration__btn-list {
@@ -52,10 +112,10 @@
 .filtration__card-product-list {
     .reset-styles-ol ();
     margin: 0;
-    padding: 0;
+    padding: 0 25px;
 
     display: flex;
-    column-gap: 20px;
+    column-gap: 15px;
     flex-wrap: wrap;
     row-gap: 20px;
 }

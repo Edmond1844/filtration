@@ -1,5 +1,6 @@
 import loadProducts from "./load.js";
-import button from "./addBtn.js"
+import button from "./addBtn.js";
+import toggleBtnThemeColor from "./toggleBackgroundColor.js";
 
 let container = document.createElement('div');
 container.className = 'filtration__container';
@@ -13,5 +14,7 @@ cardProductList.className = 'filtration__card-product-list';
 container.append(btnList, cardProductList);
 document.body.appendChild(container);
 
+
 button();
 loadProducts();
+toggleBtnThemeColor();

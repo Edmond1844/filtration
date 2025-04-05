@@ -1,9 +1,8 @@
 function getData(url) {
     return fetch(url)
-    .then(res => { return res.json()})
-    .catch(error => {
-        console.error('Error:', error);
-    });
+    .then(res => { 
+        return res.json()
+    })
 }
 
 export default getData;
