@@ -1,21 +1,23 @@
-// import products from "./data.js";
-// import getProducts from "./getProducts.js";
+import { getItemCard } from "./arrayCopy.js";
 
-// function sortProducts(sortType, cardProductList) {
-//     let sortedProducts;
+function sortProducts(sortType) {
+    const copiedItemCard = getItemCard();
+    let sortedProducts;
 
-//     if (sortType === 'alf-up') {
-//         sortedProducts = [...products].sort((a, b) => a.productName.localeCompare(b.productName));
-//     } else if (sortType === 'alf-down') {
-//         sortedProducts = [...products].sort((a, b) => b.productName.localeCompare(a.productName));
-//     } else if (sortType === "ascending") {
-//         sortedProducts = [...products].sort((a, b) => a.price - b.price);
-//     } else if (sortType === "descending") {
-//         sortedProducts = [...products].sort((a, b) => b.price - a.price);
-//     }
-    
-//     getProducts(sortedProducts, cardProductList);
+    if (sortType === 'alf-up') {
+        sortedProducts = [...copiedItemCard].sort((a, b) => a.productName.localeCompare(b.productName));
+        console.log(sortedProducts)    
+    } else if (sortType === 'alf-down') {
+        sortedProducts = [...copiedItemCard].sort((a, b) => b.productName.localeCompare(a.productName));
+        console.log(sortedProducts)   
+    } else if (sortType === "ascending") {
+        sortedProducts = [...copiedItemCard].sort((a, b) => a.price - b.price);
+        console.log(sortedProducts)   
+    } else if (sortType === "descending") {
+        sortedProducts = [...copiedItemCard].sort((a, b) => b.price - a.price);
+    }
 
-// }
+    return sortedProducts;
+}
 
-// export default sortProducts;
+export default sortProducts;

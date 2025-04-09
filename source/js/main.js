@@ -1,5 +1,5 @@
 import loadProducts from "./load.js";
-import button from "./addBtn.js";
+import button from "./renderSortButtons.js";
 import toggleBtnThemeColor from "./toggleBackgroundColor.js";
 
 let container = document.createElement('div');

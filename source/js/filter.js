@@ -1,21 +1,21 @@
-// import products from "./data.js";
-// import getProducts from "./getProducts.js";
+import { getItemCard } from "./arrayCopy.js";
 
-// function filterProducts(filterType, cardProductList) {
-//     let filteredProducts;
-//     if (filterType === "less5000") {
-//         filteredProducts = products.filter(itemPrice => itemPrice.price < 5000);
-//     } else if (filterType === "between-5000-and-10000") {
-//         filteredProducts = products.filter(itemPrice => itemPrice.price >= 5000 && itemPrice.price <= 10000);
-//     } else if (filterType === "greater10000") {
-//         filteredProducts = products.filter(itemPrice => itemPrice.price > 10000);
-//     } else if (filterType === "in-stock") {
-//         filteredProducts = products.filter(itemPrice => itemPrice.inStock);
-//     } else if (filterType === "not-available") {
-//         filteredProducts = products.filter(itemPrice => !itemPrice.inStock);
-//     }
+function filterProducts(filterType) {
+    const filterItemCard = getItemCard();
+    let filteredProducts;
 
-//     getProducts(filteredProducts, cardProductList);
-// }
+    if (filterType === "less5000") {
+        filteredProducts = filterItemCard.filter(itemPrice => itemPrice.price < 5000);
+        console.log('работает')
+    } else if (filterType === "between-5000-and-10000") {
+        filteredProducts = filterItemCard.filter(itemPrice => itemPrice.price >= 5000 && itemPrice.price <= 10000);
+    } else if (filterType === "greater10000") {
+        filteredProducts = filterItemCard.filter(itemPrice => itemPrice.price > 10000);
+    } else if (filterType === "in-stock") {
+        filteredProducts = filterItemCard.filter(itemPrice => itemPrice.inStock);
+    } else if (filterType === "not-available") {
+        filteredProducts = filterItemCard.filter(itemPrice => !itemPrice.inStock);
+    }
+}
 
-// export default filterProducts;
+export default filterProducts;

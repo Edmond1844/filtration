@@ -71,6 +71,11 @@
 
 // export default addBtn;
 
+import sortProducts from "./sort.js";
+import { getItemCard } from "./arrayCopy.js"; 
+import renderProducts from  "./render.js";
+// import filterProducts from "./filter.js";
+
 let filtrationBottons = [
     {
         "buttonName": "По алфавиту ↑",
@@ -111,6 +116,8 @@ let filtrationBottons = [
 ];
 
 function button() {
+    let cardProductList = document.querySelector('.filtration__card-product-list');
+
     let typeButton = 'button'; 
     let btnList = document.querySelector('.filtration__btn-list');
 
@@ -127,9 +134,15 @@ function button() {
         } else {
             btnFilter.setAttribute('data-sort', Itembutton["data-sort"]);
         }
+        
         btnFilter.addEventListener('click', function() {
+            cardProductList.innerHTML = '';
+
+            let arrayItems = getItemCard(); 
+                        
             if (btnFilter.hasAttribute('data-sort')) {
-                // sortProducts(btnFilter.getAttribute('data-sort'));
+                const sortedProducts = sortProducts(btnFilter.getAttribute('data-sort'), arrayItems); 
+                sortedProducts.forEach(card => renderProducts(card));
             } 
             else if (btnFilter.hasAttribute('data-filter')) {
                 // filterProducts(btnFilter.getAttribute('data-filter'));

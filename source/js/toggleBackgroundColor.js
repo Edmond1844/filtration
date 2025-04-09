@@ -1,12 +1,12 @@
 import { setThemeColor } from "./store.js";
 
 function toggleBtnThemeColor() {
-    let dataColor = localStorage.getItem('dataColor');
+    let storedTheme = localStorage.getItem('stortTheme');
 
     let themeColor;
     
-    if(dataColor) {
-        themeColor = JSON.parse(dataColor);
+    if(storedTheme) {
+        themeColor = JSON.parse(storedTheme);
     } else {
         console.log('Пусто');
     }
@@ -35,7 +35,7 @@ function toggleBtnThemeColor() {
                 newTheme = 'light'; 
         }
 
-        localStorage.setItem('dataColor', JSON.stringify(newTheme)); 
+        localStorage.setItem('stortTheme', JSON.stringify(newTheme)); 
         setThemeColor(newTheme); 
 
         btnToggle.classList.toggle('filtration__dark-theme');
