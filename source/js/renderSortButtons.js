@@ -72,9 +72,9 @@
 // export default addBtn;
 
 import sortProducts from "./sort.js";
-import { getItemCard } from "./arrayCopy.js"; 
-import renderProducts from  "./render.js";
-// import filterProducts from "./filter.js";
+import { getItemCard } from "./localStorage/arrayCopy.js"; 
+import renderProducts from  "./renderProducts.js";
+import filterProducts from "./filterProducts.js";
 
 let filtrationBottons = [
     {
@@ -115,7 +115,7 @@ let filtrationBottons = [
     },
 ];
 
-function button() {
+function renderSortButtons() {
     let cardProductList = document.querySelector('.filtration__card-product-list');
 
     let typeButton = 'button'; 
@@ -137,15 +137,14 @@ function button() {
         
         btnFilter.addEventListener('click', function() {
             cardProductList.innerHTML = '';
-
-            let arrayItems = getItemCard(); 
                         
             if (btnFilter.hasAttribute('data-sort')) {
-                const sortedProducts = sortProducts(btnFilter.getAttribute('data-sort'), arrayItems); 
+                const sortedProducts = sortProducts(btnFilter.getAttribute('data-sort')); 
                 sortedProducts.forEach(card => renderProducts(card));
             } 
             else if (btnFilter.hasAttribute('data-filter')) {
-                // filterProducts(btnFilter.getAttribute('data-filter'));
+                const filterdProducts = filterProducts(btnFilter.getAttribute('data-filter'));
+                filterdProducts.forEach(card => renderProducts(card));
             }
         });
 
@@ -154,4 +153,4 @@ function button() {
     });
 }
 
-export default button;
+export default renderSortButtons;

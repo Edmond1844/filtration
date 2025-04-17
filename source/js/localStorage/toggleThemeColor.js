@@ -1,6 +1,6 @@
 import { setThemeColor } from "./store.js";
 
-function toggleBtnThemeColor() {
+function toggleThemeColor() {
     let storedTheme = localStorage.getItem('stortTheme');
 
     let themeColor;
@@ -11,7 +11,7 @@ function toggleBtnThemeColor() {
         console.log('Пусто');
     }
 
-    let container = document.querySelector('.filtration__container');
+    let page = document.querySelector('.filtration__page');
 
     let wrapperBtn = document.createElement('div');
     wrapperBtn.className = 'filtration__btn-toggle-wrapper';
@@ -20,19 +20,20 @@ function toggleBtnThemeColor() {
     btnToggle.className = 'filtration__btn-toggle';
 
     if (themeColor === 'dark') {
-        container.classList.add('filtration__dark');
+        page.classList.add('filtration__dark');
         btnToggle.classList.add('filtration__dark-theme');
     }
 
     btnToggle.addEventListener('click', () => {
-        container.classList.toggle('filtration__dark');
+        page.classList.toggle('filtration__dark');
 
-        let newTheme;
-        if (container.classList.contains('filtration__dark')) {
+        let newTheme = [];
+        
+        if (page.classList.contains('filtration__dark')) {
             newTheme = 'dark';
         } else {
             console.log('тема светлая');
-                newTheme = 'light'; 
+            newTheme = 'light'; 
         }
 
         localStorage.setItem('stortTheme', JSON.stringify(newTheme)); 
@@ -42,9 +43,9 @@ function toggleBtnThemeColor() {
     });
 
     wrapperBtn.append(btnToggle);
-    container.appendChild(wrapperBtn);
+    page.appendChild(wrapperBtn);
 }
 
-export default toggleBtnThemeColor;
+export default toggleThemeColor;
 
 

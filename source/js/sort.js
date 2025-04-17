@@ -1,4 +1,4 @@
-import { getItemCard } from "./arrayCopy.js";
+import { getItemCard } from "./localStorage/arrayCopy.js";
 
 function sortProducts(sortType) {
     const copiedItemCard = getItemCard();

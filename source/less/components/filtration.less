@@ -1,7 +1,11 @@
+.filtration__page {
+    position: relative;
+
+    padding: 50px
+}
+
 .filtration__container {
     .container ();
-
-    position: relative;
 }
 
 .filtration__dark {
@@ -30,8 +34,8 @@
 
 .filtration__btn-toggle-wrapper {
     position: absolute;
-    top: 20px;
-    right: -50px;
+    top: 104px;
+    right: 5px;
 
     width: 50px;
     height: 25px;
@@ -98,10 +102,6 @@
     .btn ();
 
     padding: 5px 10px;
-
-    &:hover {
-        background-color: orange;
-    }
 }
 
 .filtration__card-wrapper {
@@ -138,4 +138,52 @@
     margin: 0;
 
     color: orange;
+}
+
+.filtration__add-button {
+    .btn ();
+
+    width: 360px;
+    
+    padding: 5px;
+}
+
+
+// Корзина 
+
+.filtration__cart-wrapper {
+    position: fixed;
+    top: 217px;
+    right: 8px;
+
+    padding: 50px;
+
+    box-sizing: border-box;
+
+    width: 500px;
+    max-height: 500px;
+
+    overflow-y: auto;
+    
+    border-radius: 5px;
+
+    background-color: #fff;
+}
+
+.filtration__cart-title {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.filtration__cart-item {
+    width: 300px;
+    border: 1px solid orange;
+    
+    text-align: center;
+}
+
+.filtration__cart-remove-btn {
+    padding: 5px;
+    
+    .btn ();
 }

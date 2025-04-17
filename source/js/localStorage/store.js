@@ -1,7 +1,7 @@
 let themeСolor = [];
 
 function setThemeColor(data) {
-    themeСolor = data;
+    themeСolor = [...data];
 }
 
 function getThemeColor() {
@@ -9,3 +9,4 @@ function getThemeColor() {
 }
 
 export { setThemeColor, getThemeColor };
+

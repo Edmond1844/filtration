@@ -1,6 +1,6 @@
 import getData from "./api.js";
-import renderProducts from "./render.js";
-import { setItemCard } from "./arrayCopy.js";
+import renderProducts from "./renderProducts.js";
+import { setItemCard } from "./localStorage/arrayCopy.js";
 
 function loadProducts() {
     getData('http://localhost:3001/laptops')
@@ -16,3 +16,4 @@ function loadProducts() {
 }
 
 export default loadProducts;
+

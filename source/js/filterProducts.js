@@ -1,4 +1,4 @@
-import { getItemCard } from "./arrayCopy.js";
+import { getItemCard } from "./localStorage/arrayCopy.js";
 
 function filterProducts(filterType) {
     const filterItemCard = getItemCard();
@@ -16,6 +16,8 @@ function filterProducts(filterType) {
     } else if (filterType === "not-available") {
         filteredProducts = filterItemCard.filter(itemPrice => !itemPrice.inStock);
     }
+
+    return filteredProducts;
 }
 
 export default filterProducts;
